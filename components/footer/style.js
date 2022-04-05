@@ -34,9 +34,9 @@ const styles = StyleSheet.create({
         // marginLeft: 20,
     },
     addIcon: {
-        fontSize: 6,
-        color: "red",
-        fontWeight: '100',
+        fontSize: 25,
+        color: "#19196f",
+        fontWeight: '900',
     },
     btn: {
         // display: 'flex',
@@ -50,7 +50,8 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         borderWidth:7,
         borderColor: "#19196f",
-    }
+    },
+
 })
 
 export default styles

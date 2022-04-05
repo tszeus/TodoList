@@ -1,9 +1,9 @@
 import styles from './style'
 
-import { View, Text, TextInput} from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, Keyboard} from 'react-native'
 import React, { useRef } from 'react'
-import { Button } from 'react-native-paper'; 
 import {useStore, setInputTodo, addTodo} from '../../store'
+// import { TouchableOpacity } from 'react-native-web';
 
 const Footer = () => {
   const inputRef = useRef();
@@ -16,6 +16,7 @@ const Footer = () => {
       inputRef.current.focus()
     // console.log(todos)
       dispash((setInputTodo('')))
+      Keyboard.dismiss()
     }
   }
   return (
@@ -29,15 +30,12 @@ const Footer = () => {
                 onChangeText={(e) => {dispash(setInputTodo(e))}}
             />
         </View>
-        <Button 
+        <TouchableOpacity
           style={styles.btn}
-          mode="text" 
           onPress={handlerAdd}
         >
-          <Text style={styles.addIcon}>+</Text>
-        </Button>
-      
-        
+          <Text style={styles.addIcon}> + </Text>
+        </TouchableOpacity>
     </View>
   )
 }
